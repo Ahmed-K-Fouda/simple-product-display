@@ -1,0 +1,207 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- add css link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- add icon link -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- add link google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login - Redstroe</title>
+</head>
+<body>
+    
+    <!-- start container -->
+    <div class="container">
+        <!-- start header -->
+        <header>
+            
+            <!-- create logo -->
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png"></a>
+                
+             </div><!--end logo-->
+             <!-- create nav -->
+             <nav >
+                <ul id="navLinks">
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="product.html">Product</a></li>
+                 <li><a href="">About</a></li>
+                 <li><a href="account.html">Contact</a></li>
+                 <li><a href="account.html">Account</a></li>
+                </ul>
+             </nav>
+            <div class="cart">
+                <a href="cart.html"><img src="./images/cart.png" width="25" style="cursor: pointer; margin-bottom: 8px;"></a>
+                <img src="./images/menu.png" class="menu" onclick="showMenu()">
+            </div>
+        </header>
+    </div><!--end contain-->
+
+    <!-- craete acount -->
+
+    <div class="account">
+        <div class="container">
+            <div class="row">
+                <div class="account-col">
+                    <img src="./images/image1.png" width="100%">
+                </div>
+                <div class="account-col">
+                    <div class="form-container">
+                        <div class="form-info">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Line">
+                        </div>
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Enter Your Name" class="inp1">
+                            <input type="password" placeholder="Your Password" class="inp1">
+                            <button class="btn-head inp1" type="submit">Login</button>
+                            <a href="" class="inp1">Forget Password</a>
+                        </form>
+                        <form id="RegForm">
+                            <input type="text" placeholder="Enter Your Name">
+                            <input type="password" placeholder="Your Password">
+                            <input type="email" placeholder="Your E-mail">
+                            <button class="btn-head" type="submit">Register</button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- start footer -->
+    
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-foot-1 foot">
+                    <h3>Download Our App</h3>
+                    <p>Download Apps For Both Android And Iphone</p>
+                    <div class="pic-foot">
+                        <img src="./images/play-store.png">
+                        <img src="./images/app-store.png">
+                    </div>
+                </div><!--end col-foot-->
+                <div class="col-foot-2 foot">
+                    <img src="./images/logo-white.png">
+                    <p>Our Purpose Is To Sustainably Make The Pleasure
+                       And The Benfits Of sports Accessible To The Many 
+                    </p>
+                </div><!--end col2-->
+                <div class="col-foot-3 foot">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+
+                </div><!--end col-3-->
+                <div class="col-foot-4 foot">
+                    <h3>Join Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instgram</li>
+                        <li>Youtube</li>
+                    </ul>
+            </div><!--end row-->
+        </div><!--end container-->
+    </div><!--end footer-->
+    <!-- end footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- simple js for nav -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        navLinks.style.maxHeight = "0px"
+        function showMenu(){
+            if(navLinks.style.maxHeight == "0px")
+            {
+                navLinks.style.maxHeight = "200px";
+            }
+            else
+            {
+                navLinks.style.maxHeight = "0px"
+            }
+        }
+    </script>
+
+    <!-- for product img -->
+    <script>
+    var productImg = document.getElementById("productImg");
+    var SmallImg = document.getElementsByClassName("SmallImg");
+
+        SmallImg[0].onclick = function()
+        {
+            productImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function()
+        {
+            productImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function()
+        {
+            productImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function()
+        {
+            productImg.src = SmallImg[3].src;
+        }
+    </script>
+
+    <!-- login -->
+
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Line = document.getElementById("Line");
+        function register(){
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Line.style.transform = "translateX(148px)";
+        }
+        function login(){
+            LoginForm.style.transform = "translateX(330px)";
+            RegForm.style.transform = "translateX(330px)";
+            Line.style.transform = "translateX(40px)";
+        }
+    </script>
+
+</body>
+</html>
